@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAILS</title>
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/all.css">
+</head>
+
+<body>
+    <div class="container"></div>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/bootstrap.js"></script>
+    <script>
+        var id=location.search.slice(1);
+        $.get("/showdetails", `id=${id}`,(data) => {
+            console.log(data);
+            var $h1 = $(`<h1>${data[0].title}</h1>`);
+            var $p = $(`<p>${data[0].content}</p>`);
+            
+            $(".container").append($h1);
+            $(".container").append($p);
+        }, "JSON")
+    </script>
+</body>
+
+</html>

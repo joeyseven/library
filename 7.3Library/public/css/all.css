@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* body{
+    background:url(/img/2.jpg);
+} */
+a{
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(85, 23, 201);
+}
+td{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.modal-dialog{
+    width:400px!important;
+}
